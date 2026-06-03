@@ -89,9 +89,9 @@ export default function App() {
   }
 
   return (
-    <div style={{ display: 'flex', height: '100vh', overflow: 'hidden', position: 'relative' }}>
+    <div style={{ display: 'flex', height: '100vh', width: '100vw', overflow: 'hidden', position: 'relative' }}>
       <Sidebar active={screen} onNav={setScreen} />
-      <div id="main-scroll" style={{ flex: 1, overflowY: 'auto', background: '#f9fafb' }}>
+      <div id="main-scroll" style={{ flex: 1, minWidth: 0, overflowY: 'auto', background: '#f9fafb' }}>
         {SCREENS[screen] || SCREENS.dashboard}
       </div>
     </div>
